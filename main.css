@@ -19,20 +19,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .slider__wrapper {
     width: 100%;
+    display: flex;
+    transition: all 0.6s ease;
 }
 
 .slider__slide {
+    min-width: 100%;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    max-height: 690px;
+    overflow-y: hidden;
+    height: 100%;
 }
 .slider__slide-img {
-    width: 100%;
-    object-fit: cover;
+    min-width: 1200px;
+    object-fit: contain;
     border-radius: 0.8rem;
+    max-height: 500px;
 }
 
 .slider__slide-text {
@@ -44,7 +53,20 @@ body {
     align-self: flex-end;
 }
 
-span {
+#slide1:target ~ .slider__wrapper {
+    transform: translateX(0%);
+}
+#slide2:target ~ .slider__wrapper {
+    transform: translateX(-100%);
+}
+#slide3:target ~ .slider__wrapper {
+    transform: translateX(-200%);
+}
+#slide4:target ~ .slider__wrapper {
+    transform: translateX(-300%);
+}
+
+.slider__pagination a {
     width: 0.8rem;
     height: 0.8rem;
     background-color: rgb(53, 53, 139);
@@ -54,7 +76,7 @@ span {
     border: 0.2rem solid rgb(53, 53, 139);
 }
 
-span:hover {
+.slider__pagination a:hover {
     background-color: transparent;
     border: 0.2rem solid rgb(53, 53, 139);
     cursor: pointer;
