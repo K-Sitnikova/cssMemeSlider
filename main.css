@@ -93,8 +93,8 @@ body {
 }
 
 .slider__pagination a:hover {
-    background-color: transparent;
-    border: 0.2rem solid rgb(53, 53, 139);
+    background-color: #fff;
+    border: 0.2rem solid #fff;
     cursor: pointer;
 }
 
@@ -123,12 +123,14 @@ body {
 }
 
 @media (max-width: 992px) {
+
     .slider__slide-text {
         font-size: 0.85rem;
     }
 }
 
 @media (max-width: 768px) {
+
     .slider {
         padding: 1.5rem 0;
     }
@@ -143,7 +145,6 @@ body {
 }
 
 @media (max-width: 552px) {
-
     .slider__slide-text {
         font-size: 0.75rem;
     }
